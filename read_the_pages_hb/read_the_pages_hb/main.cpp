@@ -9,9 +9,10 @@
 #include <iostream>
 using namespace std;
 #include <vector>
+#define ll long long
 
 
-long long sum_pages(long long start,long long end,vector<long long> a)
+long long sum_pages(ll start,long long end,vector<long long> a)
 {
     long long sum=0;
     for (long long i=start;i<(end);i++)
@@ -110,7 +111,8 @@ long long read_pages(long long n,long long m,vector<long long> books)
 }
 
 
-int main() {
+int main()
+{
     
     long long n;
     cin>>n;
@@ -125,6 +127,8 @@ int main() {
     
         cin>>books[i];
     }
+    sort(books.begin(), books.end());
+    
     cout<<read_pages(n,m,books)<<endl;
     
     
